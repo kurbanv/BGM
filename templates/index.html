@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Search</title>
+</head>
+<body>
+    <h1>Flask Search Example</h1>
+    
+    <form action="/search" method="get">
+        <label for="query">Search:</label>
+        <input type="text" id="query" name="query" value="">
+        <button type="submit">Search</button>
+    </form>
+    
+    <h2>Data:</h2>
+    <ul>
+        {% for item in data %}
+            <li>{{ item['title'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
